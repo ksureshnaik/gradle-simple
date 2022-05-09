@@ -16,14 +16,12 @@ phases:
       - apt-get install -y gradle
       # - install gradle
       # - echo installation complete
-    
   pre_build:
     run-as: ubuntu
     on-failure: CONTINUE
     commands:
       - gradle clean
       # - command 
-    
   build:
     run-as: ubuntu
     on-failure:  CONTINUE
