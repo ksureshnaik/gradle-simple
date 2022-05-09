@@ -18,4 +18,4 @@ phases:
 artifacts:
   discard-paths: yes
   files:
-    - target/*
+    - build/*
