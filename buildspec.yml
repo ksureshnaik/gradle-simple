@@ -11,7 +11,7 @@ phases:
     commands:
       - echo Build started on `date`
       - echo $CODEBUILD_SRC_DIR
-      - gradlew build
+      - gradle build
   post_build:
     commands:
       - echo Build completed on `date`
