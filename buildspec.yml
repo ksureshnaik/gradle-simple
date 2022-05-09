@@ -4,56 +4,27 @@ version: 0.2
 run-as: ubuntu
 
 phases:
-#  install:
-#    runtime-versions:
-#      java: corretto11
-#  install:
-#    run-as: ubuntu
-#    on-failure:  CONTINUE
-#    runtime-versions:
-#      runtime: version 18.04
     commands:
       - apt-get install -y gradle
-      # - install gradle
-      # - echo installation complete
   pre_build:
     run-as: ubuntu
     on-failure: CONTINUE
     commands:
       - gradle clean
-      # - command 
   build:
     run-as: ubuntu
     on-failure:  CONTINUE
     commands:
       - gradle build
-      # - command2
   post_build:
     run-as: ubuntu
     on-failure:  CONTINUE
     commands:
       - gradle package
-      # - command
-# reports:
-#   report-group-name-or-arn:
-#     files:
-#       - location
-#       - location
-#     base-directory: location
-#     discard-paths: no | yes
-#     file-format: report-format
 artifacts:
   files:
     - target/helloworld.jar
-    # - location
   name: helloworld.jar
   discard-paths: no 
   base-directory: /target
-  # exclude-paths: excluded paths
-  # enable-symlinks: no | yes
   s3-prefix: bucket-new123456
-  
-# cache:
-#   paths:
-#     - path
-#     - path
