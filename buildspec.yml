@@ -32,7 +32,7 @@ phases:
     run-as: ubuntu
     on-failure:  CONTINUE
     commands:
-      - gradlle build
+      - gradle build
       # - command2
     finally:
       # - command
