@@ -1,21 +1,15 @@
-version: 0.2
+version: 0.1
 
 phases:
   install:
-    commands:
-      - echo Nothing to do in the install phase...
-  pre_build:
-    commands:
-      - echo Nothing to do in the pre_build phase...
+   commands:
+     - echo Entering install phase...
+     - echo Nothing to do now
   build:
     commands:
-      - echo Build started on `date`
-      - echo $CODEBUILD_SRC_DIR
-      - gradlew build
-  post_build:
-    commands:
-      - echo Build completed on `date`
+     - echo Build started on `date`
+     - gradle build
 artifacts:
-  discard-paths: yes
+  type: zip
   files:
-    - build/*
+    - 'build/libs/*.jar'
