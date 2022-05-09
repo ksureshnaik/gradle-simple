@@ -3,7 +3,7 @@ version: 0.1
 phases:
   install:
     runtime-versions:
-        java: correto11
+        java: openjdk11
   install:
    commands:
      - echo Entering install phase...
