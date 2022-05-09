@@ -14,8 +14,6 @@ phases:
      - gradlew compile
     commands:
      - gradlew build
-    commands:
-     - gradlew bootjar
 artifacts:
   type: zip
   files:
