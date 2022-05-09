@@ -18,7 +18,7 @@ phases:
       # - echo installation complete
     finally:
       # - echo command1
-        - echo command2
+        - echo {"\"key\"":"\"value\""}
   pre_build:
     run-as: ubuntu
     on-failure: CONTINUE
@@ -26,7 +26,7 @@ phases:
       - gradle clean
       # - command 
     finally:
-      - echo gradle workspace is clean
+      - echo {"\"key\"":"\"value\""}
       # - command
   build:
     run-as: ubuntu
@@ -35,7 +35,7 @@ phases:
       - gradle build
       # - command2
     finally:
-      # - command
+      # - echo {"\"key\"":"\"value\""}
       # - command
   post_build:
     run-as: ubuntu
@@ -44,7 +44,7 @@ phases:
       - gradle package
       # - command
     finally:
-      # - command
+      # - echo {"\"key\"":"\"value\""}
       # - command
 # reports:
 #   report-group-name-or-arn:
