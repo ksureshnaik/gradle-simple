@@ -11,10 +11,10 @@ phases:
     commands:
       - echo Build started on `date`
       - echo $CODEBUILD_SRC_DIR
-      - uServices/hello-world-java/gradlew build
+      - gradlew build
   post_build:
     commands:
       - echo Build completed on `date`
 artifacts:
   files:
-    - uServices/hello-world-java/build/distributions/*
+    - target/helloworld.jar*
