@@ -56,9 +56,9 @@ phases:
 #     file-format: report-format
 artifacts:
   files:
-    - target/covid19.jar
+    - target/helloworld.jar
     # - location
-  name: covid19.jar
+  name: helloworld.jar
   discard-paths: no 
   base-directory: /target
   # exclude-paths: excluded paths
