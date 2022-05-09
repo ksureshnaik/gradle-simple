@@ -4,14 +4,14 @@ version: 0.2
 run-as: ubuntu
 
 phases:
-  install:
-    runtime-versions:
-      java: corretto11
-  install:
-    run-as: ubuntu
-    on-failure:  CONTINUE
-    runtime-versions:
-      runtime: version 18.04
+#  install:
+#    runtime-versions:
+#      java: corretto11
+#  install:
+#    run-as: ubuntu
+#    on-failure:  CONTINUE
+#    runtime-versions:
+#      runtime: version 18.04
     commands:
       - apt-get install -y gradle
       # - install gradle
