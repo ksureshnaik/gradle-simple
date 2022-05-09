@@ -9,7 +9,11 @@ phases:
     commands:
      - echo Build started on `date`
      - gradlew compile
+    commands:
+     - gradlew build
+    commands:
+     - gradlew bootjar
 artifacts:
   type: zip
   files:
-    - 'target/ROOT.jar'
+    - 'target/boot.jar'
