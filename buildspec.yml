@@ -29,4 +29,4 @@ phases:
      - gradle package
 artifacts:
   files:
-    - 'target/testnewzip.zip'
+    - 'targetzip.jar'
