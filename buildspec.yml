@@ -1,7 +1,7 @@
 version: 0.1
 phases:
   install:
-   commands:
+#   commands:
 #     - sudo amazon-linux-extras install java-openjdk11
 #     - sudo yum install java-1.8.0-openjdk
     runtime-versions:
