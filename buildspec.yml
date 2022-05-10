@@ -1,13 +1,21 @@
 version: 0.1
-
 phases:
   install:
+   commands:
+     - amazon-linux-extras install java-openjdk11
+	   - yum install java-1.8.0-openjdk
     runtime-versions:
         java: openjdk11
   install:
    commands:
      - echo Entering install phase...
-     - echo Nothing to do now
+     - wget https://services.gradle.org/distributions/gradle-5.0-bin.zip -P /tmp
+	   - sudo unzip -d /opt/gradle /tmp/gradle-5.0-bin.zip
+  	 - ls /opt/gradle/gradle-5.0
+	   - sudo nano /etc/profile.d/gradle.sh
+	   - sudo chmod +x /etc/profile.d/gradle.sh
+	   - source /etc/profile.d/gradle.sh
+  	 - gradle -v
   build:
     commands:
      - echo Build started on `date`
@@ -15,6 +23,6 @@ phases:
     commands:
      - gradlew build
 artifacts:
-  type: zip
+  type: *
   files:
     - 'target/boot.jar'
