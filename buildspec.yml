@@ -29,4 +29,6 @@ phases:
      - gradle package
 artifacts:
   files:
-    - 'targetzip.jar'
+    - appspec.yml
+    - target/hello.jar
+    - scripts/*
