@@ -2,8 +2,8 @@ version: 0.1
 phases:
   install:
    commands:
-     - sudo amazon-linux-extras install java-openjdk11
-     - sudo yum install java-1.8.0-openjdk
+#     - sudo amazon-linux-extras install java-openjdk11
+#     - sudo yum install java-1.8.0-openjdk
     runtime-versions:
         java: openjdk11
   install:
@@ -22,6 +22,7 @@ phases:
      - gradlew compile
     commands:
      - gradlew build
+     - gradle package
 artifacts:
   type: *
   files:
