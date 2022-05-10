@@ -23,7 +23,7 @@ phases:
     commands:
      - gradlew build
      - gradle package
-artifacts:
+Artifacts:
   type: *
   files:
     - 'target/boot.jar'
