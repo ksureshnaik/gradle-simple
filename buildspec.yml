@@ -22,8 +22,8 @@ phases:
      - gradle -v
   build:
     commands:
-#     - apply plugin: 'java'
-     - echo Build started on `date`
+     - apply plugin: 'java'
+     - echo Build started on date
      - gradlew build
     commands:
 #     - gradle package
