@@ -23,7 +23,6 @@ phases:
     commands:
      - gradlew build
      - gradle package
-Artifacts:
-  type: *
+artifacts:
   files:
-    - 'target/boot.jar'
+    - 'helloworld.jar'
